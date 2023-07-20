@@ -1184,3 +1184,26 @@ describe('converts string to bytes', () => {
     `)
   })
 })
+
+test.only('https://github.com/wagmi-dev/viem/issues/905', () => {
+  expect(toBytes('USDT', { size: 16 })).toMatchInlineSnapshot(`
+    Uint8Array [
+      85,
+      83,
+      68,
+      84,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  `)
+})
